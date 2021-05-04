@@ -6,7 +6,7 @@ function Header() {
       <header>
         <h1>
           <EmojiObjectsIcon />
-          Keeper
+          Keep
         </h1>
       </header>
     );

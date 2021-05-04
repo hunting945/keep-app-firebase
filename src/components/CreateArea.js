@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AddIcon from "@material-ui/icons/Add";
 import Fab from "@material-ui/core/Fab";
 import Zoom from "@material-ui/core/Zoom";
+import firebase from "../Firebase";
 
 function CreateArea(props) {
     const [isExpanded, setExpanded] = useState(false);
@@ -23,7 +24,9 @@ function CreateArea(props) {
     }
   
     function submitNote(event) {
-      props.onAdd(note);
+      //props.onAdd(note);
+      const todoRef = firebase.database().ref('todo');
+      todoRef.push(note);
       setNote({
         title: "",
         content: ""

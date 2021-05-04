@@ -1,9 +1,14 @@
 import React from "react";
 import DeleteIcon from "@material-ui/icons/Delete";
+import firebase from "../Firebase";
 
 function Note(props) {
     function handleClick() {
-      props.onDelete(props.id);
+        const todoRef = firebase.database().ref('todo');
+        setTimeout(() => {
+            todoRef.child(props.id).remove();
+        }, 500);
+        props.onDelete(props.id);
     }
   
     return (
