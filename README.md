@@ -1,8 +1,8 @@
-# Tools, Techniques, Skills are in use 使用到的工具, 技術, 技巧
-* HTML, CSS
+# Project composition, Development Kit
+* Javascript, HTML, CSS
 * React: component, hooks
 * Firebase
-* Development Tools: VSCode, github
+* VSCode
 
 # How to run 如何使用
 1. Download project
@@ -13,7 +13,9 @@ git clone https://github.com/hunting945/keep-app-firebase
 ```
 npm install
 ```
-3. create Firebase Init Config Data
+3. create a Firebase account, a web app project and realtime database
+
+4. create Firebase init config data in FirebaseConfig.json
 ```
 {
     "API_KEY": "...",
